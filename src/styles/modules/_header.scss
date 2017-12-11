@@ -1,0 +1,48 @@
+.header {
+  text-align: center;
+  background: url("/images/bg.jpg") 0% 50%;
+  height: 15rem;
+  border: none;
+  border-radius: 0;
+
+  & .container {
+    height: 100%;
+    padding-top: 2rem;
+    background: rgba($color: rgba(0, 0, 0, 0.54), $alpha: 0.5);
+  }
+
+  & a {
+    margin-top: 2.5rem;
+    color: #fffeff !important;
+
+    &:hover {
+      color: #b5df00 !important;
+    }
+  }
+
+  &__navlink {
+    margin-left: 4rem;
+    width: 15rem;
+  }
+
+  & .navbar-brand {
+    font-size: 3rem;
+    color: #fffeff;
+    cursor: default;
+    padding-bottom: 2rem;
+    height: 100%;
+    &:hover {
+      color: #b5df00;
+    }
+
+    & p {
+      font-size: 1.5rem;
+      color: #b5df00;
+    }
+  }
+}
+
+.is-active {
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.54);
+}

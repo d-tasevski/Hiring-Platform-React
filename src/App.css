@@ -1,0 +1,111 @@
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #212121;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background: #546e7a url("/images/ricepaper2.png"); }
+
+a {
+  color: #616161; }
+  a:hover {
+    text-decoration: none;
+    color: #212121; }
+
+button {
+  cursor: pointer; }
+
+button:disabled {
+  cursor: default; }
+
+.box-layout {
+  background: #546e7a url("/images/bg.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .box-layout__box {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 3px;
+    text-align: center;
+    width: 35rem;
+    padding: 3.2rem 1.6rem; }
+  .box-layout__title {
+    margin: 0 0 1.6rem 0;
+    line-height: 1; }
+
+.header {
+  text-align: center;
+  background: url("/images/bg.jpg") 0% 50%;
+  height: 15rem;
+  border: none;
+  border-radius: 0; }
+  .header .container {
+    height: 100%;
+    padding-top: 2rem;
+    background: rgba(0, 0, 0, 0.5); }
+  .header a {
+    margin-top: 2.5rem;
+    color: #fffeff !important; }
+    .header a:hover {
+      color: #b5df00 !important; }
+  .header__navlink {
+    margin-left: 4rem;
+    width: 15rem; }
+  .header .navbar-brand {
+    font-size: 3rem;
+    color: #fffeff;
+    cursor: default;
+    padding-bottom: 2rem;
+    height: 100%; }
+    .header .navbar-brand:hover {
+      color: #b5df00; }
+    .header .navbar-brand p {
+      font-size: 1.5rem;
+      color: #b5df00; }
+
+.is-active {
+  color: rgba(0, 0, 0, 0.87);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.54); }
+
+.filterForm {
+  display: flex;
+  justify-content: center; }
+  .filterForm .textFilter {
+    height: 45px; }
+  .filterForm .sortFilter {
+    height: 45px; }
+
+.candidateList {
+  display: flex;
+  padding: 3rem;
+  flex-flow: row wrap;
+  font-family: "Open Sans", sans-serif; }
+
+.candidateCard {
+  text-align: center;
+  height: 30rem;
+  width: 30%;
+  padding: 2rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+  overflow: auto; }
+  .candidateCard span {
+    margin: 2px; }
+  .candidateCard .panel .panel-default {
+    text-align: justify; }
+  .candidateCard__appliedDate {
+    font-size: 1.2rem; }
+  .candidateCard__skilled {
+    font-size: 1.5rem;
+    margin: 0; }
+  .candidateCard__cv {
+    font-size: 1.3rem;
+    text-align: left; }
+  .candidateCard__notes {
+    font-size: 1.5rem;
+    text-align: justify; }

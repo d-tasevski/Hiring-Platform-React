@@ -1,0 +1,31 @@
+.candidateCard {
+  text-align: center;
+  height: 30rem;
+  width: 30%;
+  padding: 2rem;
+  border: 1px solid black;
+  margin: 0.5rem;
+  overflow: auto;
+  & span {
+    margin: 2px;
+  }
+  & .panel .panel-default {
+    text-align: justify;
+  }
+
+  &__appliedDate {
+    font-size: 1.2rem;
+  }
+  &__skilled {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  &__cv {
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  &__notes {
+    font-size: 1.5rem;
+    text-align: justify;
+  }
+}

@@ -1,0 +1,28 @@
+html {
+  // Reset default font size of 16 px to 10 px so that we can scale it with rem units
+  font-size: 62.5%;
+}
+
+body {
+  // font-family: 'Open Sans', sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: $dark-grey;
+  font-size: $medium-size;
+  line-height: 1.6;
+  background: #546e7a url("/images/ricepaper2.png");
+}
+
+a {
+  color: #616161;
+  &:hover {
+    text-decoration: none;
+    color: #212121;
+  }
+}
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}

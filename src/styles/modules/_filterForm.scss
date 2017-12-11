@@ -1,0 +1,12 @@
+.filterForm {
+  display: flex;
+  justify-content: center;
+
+  & .textFilter {
+    height: 45px;
+  }
+
+  & .sortFilter {
+    height: 45px;
+  }
+}
