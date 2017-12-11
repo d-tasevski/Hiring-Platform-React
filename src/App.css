@@ -82,14 +82,14 @@ button:disabled {
 
 .candidateList {
   display: flex;
-  padding: 3rem;
+  padding: 1rem;
   flex-flow: row wrap;
   font-family: "Open Sans", sans-serif; }
 
 .candidateCard {
   text-align: center;
   height: 30rem;
-  width: 30%;
+  width: 49%;
   padding: 2rem;
   border: 1px solid black;
   margin: 0.5rem;
