@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
 
-  & .DateRangePicker {
-    margin-left: 5px;
+  & .DateRangePicker_1 {
+    margin: 0 5px 0 5px;
+    border-radius: 5px;
   }
 
   & input[type="text"] {

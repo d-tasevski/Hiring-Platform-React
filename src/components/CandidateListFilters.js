@@ -2,14 +2,16 @@ import 'react-dates/initialize';
 import React, { Component } from 'react';
 import { DateRangePicker } from 'react-dates';
 import { connect } from 'react-redux';
+import { startLoadSamples } from '../actions/persons';
 import { Form, FormGroup, FormControl } from 'react-bootstrap';
 import {
   setTextFilter,
   sortByDate,
-  sortByAmount,
+  sortByName,
   setStartDate,
   setEndDate,
 } from '../actions/filters';
+import persons from '../fixtures/persons';
 
 export class CandidateListFilters extends Component {
   constructor(props) {
@@ -34,9 +36,15 @@ export class CandidateListFilters extends Component {
   onSortChange = (e) => {
     if (e.target.value === 'date') {
       this.props.sortByDate();
-    } else if (e.target.value === 'amount') {
-      this.props.sortByAmount();
+    } else if (e.target.value === 'name') {
+      this.props.sortByName();
     }
+  };
+
+  handleSampleData = () => {
+    persons.forEach((person) => {
+      this.props.startLoadSamples(person);
+    });
   };
 
   render() {
@@ -51,7 +59,7 @@ export class CandidateListFilters extends Component {
               onChange={this.onSortChange}
             >
               <option value="date">Date</option>
-              <option value="amount">Name</option>
+              <option value="name">Name</option>
             </select>
             <FormControl
               className="textFilter"
@@ -77,6 +85,12 @@ export class CandidateListFilters extends Component {
             />
           </FormGroup>
         </Form>
+        <button
+          className="custom-btn buttonLabel"
+          onClick={this.handleSampleData}
+        >
+          Load sample data
+        </button>
       </div>
     );
   }
@@ -93,8 +107,8 @@ const mapDispatchToProps = dispatch => ({
   sortByDate: () => {
     dispatch(sortByDate());
   },
-  sortByAmount: () => {
-    dispatch(sortByAmount());
+  sortByName: () => {
+    dispatch(sortByName());
   },
   setStartDate: (startDate) => {
     dispatch(setStartDate(startDate));
@@ -102,6 +116,7 @@ const mapDispatchToProps = dispatch => ({
   setEndDate: (endDate) => {
     dispatch(setEndDate(endDate));
   },
+  startLoadSamples: data => dispatch(startLoadSamples(data)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(CandidateListFilters, );

@@ -1,3 +1,4 @@
+// REgular button
 .button,
 .button:link,
 .button:visited {
@@ -17,7 +18,7 @@
     border-radius: 30px;
   }
 }
-
+// Danger button
 .buttonDanger,
 .buttonDanger:link,
 .buttonDanger:visited {
@@ -37,13 +38,11 @@
     border-radius: 30px;
   }
 }
-
+// Info button
 .buttonInfo,
 .buttonInfo:link,
 .buttonInfo:focus,
 .buttonInfo:visited {
-  // padding: 13px 0;
-  // border: 1px solid #333;
   color: #333;
   font-weight: 700;
   text-transform: uppercase;
@@ -61,6 +60,7 @@
   }
 }
 
+// Labels for code skills
 .custom-btn {
   padding: 2px 5px;
   background: transparent;
@@ -87,6 +87,11 @@
   background: #000;
   transition: all 0.3s ease;
 }
+
+.filterForm .buttonLabel:after {
+  background: #757575;
+}
+
 .buttonLabel:hover {
   color: #fff;
 }
@@ -96,4 +101,52 @@
 }
 .buttonLabel:active {
   top: 2px;
+}
+
+// CV download button
+.buttonDl {
+  margin: 10px auto;
+  box-sizing: border-box;
+  height: 25px;
+  display: table;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
+  transition: background 0.5s;
+  cursor: pointer;
+
+  span {
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    color: $button-color;
+    box-shadow: 0 0 0 3px $button-color inset;
+    background: transparent;
+  }
+
+  .away {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .over {
+    display: none;
+  }
+
+  &:hover span.away {
+    display: none;
+  }
+
+  &:hover span.over {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    box-shadow: none;
+  }
+
+  &:hover {
+    background: $button-color;
+  }
 }

@@ -15,10 +15,10 @@ const filtersReducer = (state = filterReducerDefaultState, action) => {
       ...state,
       text: action.text,
     };
-  case 'SORT_BY_AMOUNT':
+  case 'SORT_BY_NAME':
     return {
       ...state,
-      sortBy: 'amount',
+      sortBy: 'name',
     };
   case 'SORT_BY_DATE':
     return {

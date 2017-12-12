@@ -12,19 +12,22 @@ const getVisibleCandidates = (persons, {
       const endDateMatch = endDate
         ? endDate.isSameOrAfter(createdAtMoment, 'day')
         : true;
-      const textMatch = person.firstName
+      const textMatchFN = person.firstName
+        .toLowerCase()
+        .includes(text.toLowerCase());
+      const textMatchLN = person.lastName
         .toLowerCase()
         .includes(text.toLowerCase());
 
-      return startDateMatch && endDateMatch && textMatch;
+      return startDateMatch && endDateMatch && (textMatchFN || textMatchLN);
     })
     // eslint-disable-next-line array-callback-return
     .sort((a, b) => {
       // from highest to lowest value
       if (sortBy === 'date') {
         return a.date < b.date ? 1 : -1;
-      } else if (sortBy === 'amount') {
-        return a.amount < b.amount ? 1 : -1;
+      } else if (sortBy === 'name') {
+        return a.firstName < b.firstName ? -1 : 1;
       }
     });
 

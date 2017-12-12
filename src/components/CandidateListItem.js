@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Label, Button, Panel, Glyphicon } from 'react-bootstrap';
+import { Button, Panel, Glyphicon } from 'react-bootstrap';
 import { formatDate } from '../helpers'; // or just use Numeral.js for formating currency
 
 class CandidateListItem extends React.Component {
@@ -25,7 +25,7 @@ class CandidateListItem extends React.Component {
     return (
       <div className="container candidateCard">
         <Link to={`/edit/${id}`}>
-          <h3>
+          <h3 title="Edit applicant's profile">
             <Glyphicon glyph="user" /> {`${firstName} ${lastName}`}
           </h3>
         </Link>
@@ -52,19 +52,22 @@ class CandidateListItem extends React.Component {
             More info
           </Button>
           <Panel collapsible expanded={this.state.open}>
+            {notes && (
+              <div className="candidateCard__notes">
+                <p className="textCenter">Notes about candidate: </p>
+                <p className="well well-sm">{notes}</p>
+                <hr />
+              </div>
+            )}
             {cvUri &&
               cvFileName && (
                 <p className="candidateCard__cv">
-                  Download CV: <a href={cvUri}>{cvFileName}</a>
+                  <a href={cvUri} className="buttonDl">
+                    <span className="away">Download CV</span>
+                    <span className="over">{cvFileName}</span>
+                  </a>
                 </p>
               )}
-            {notes && (
-              <div className="candidateCard__notes">
-                <hr />
-                <p>Notes about candidate: </p>
-                <p className="well well-sm">{notes}</p>
-              </div>
-            )}
           </Panel>
         </div>
       </div>

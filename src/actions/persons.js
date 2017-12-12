@@ -6,6 +6,25 @@ import database from '../firebase/firebase';
 // ? component dispatches function (redux middleware)(redux-thunk?)
 // ? redux store changes
 
+export const loadSamples = personSample => ({
+  type: 'LOAD_SAMPLES',
+  personSample,
+});
+
+export const startLoadSamples = (personSample = {}) => (dispatch, getState) => {
+  // set defaults and destructure from personData
+  const { uid } = getState().auth;
+  return database
+    .ref(`users/${uid}/candidates`)
+    .push(personSample)
+    .then((ref) => {
+      dispatch(loadSamples({
+        id: ref.key,
+        ...personSample,
+      }), );
+    });
+};
+
 // Add Candidate
 export const addCandidate = person => ({
   type: 'ADD_PERSON',

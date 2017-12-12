@@ -116,6 +116,9 @@ button:disabled {
   background: #000;
   transition: all 0.3s ease; }
 
+.filterForm .buttonLabel:after {
+  background: #757575; }
+
 .buttonLabel:hover {
   color: #fff; }
 
@@ -125,6 +128,40 @@ button:disabled {
 
 .buttonLabel:active {
   top: 2px; }
+
+.buttonDl {
+  margin: 10px auto;
+  box-sizing: border-box;
+  height: 25px;
+  display: table;
+  font-size: 13px;
+  font-weight: bold;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.55);
+  transition: background 0.5s;
+  cursor: pointer; }
+  .buttonDl span {
+    padding: 0 10px;
+    width: 100%;
+    height: 100%;
+    color: #2d3142;
+    box-shadow: 0 0 0 3px #2d3142 inset;
+    background: transparent; }
+  .buttonDl .away {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center; }
+  .buttonDl .over {
+    display: none; }
+  .buttonDl:hover span.away {
+    display: none; }
+  .buttonDl:hover span.over {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    box-shadow: none; }
+  .buttonDl:hover {
+    background: #2d3142; }
 
 .box-layout {
   background: #546e7a url("/images/bg.jpg") no-repeat;
@@ -175,6 +212,8 @@ button:disabled {
     .header .navbar-brand p {
       font-size: 1.5rem;
       color: #b5df00; }
+  .header .loadSamples {
+    font-size: 1.4rem; }
 
 .is-active {
   color: rgba(0, 0, 0, 0.87);
@@ -183,8 +222,9 @@ button:disabled {
 .filterForm {
   display: flex;
   justify-content: center; }
-  .filterForm .DateRangePicker {
-    margin-left: 5px; }
+  .filterForm .DateRangePicker_1 {
+    margin: 0 5px 0 5px;
+    border-radius: 5px; }
   .filterForm input[type="text"] {
     margin-left: 5px; }
   .filterForm .textFilter {
@@ -227,6 +267,8 @@ button:disabled {
     text-align: justify; }
     .candidateCard__notes .well {
       margin-bottom: 0; }
+  .candidateCard .tooltipFix {
+    right: 5rem; }
 
 .formCvDate {
   display: flex;

@@ -17,6 +17,8 @@ const candidatesReducer = (state = candidateReducerDefaultState, action) => {
     });
   case 'SET_PERSONS':
     return action.persons;
+  case 'LOAD_SAMPLES':
+    return [...state, action.personSample];
   default:
     return state;
   }

@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { startLogout } from '../actions/auth';
 
 /* eslint-disable no-shadow */
-export const Header = ({ startLogout }) => (
+export const Header = ({ startLogout, startLoadSamples }) => (
   <Navbar className="header">
     <Navbar.Header>
       <Navbar.Brand>
@@ -30,7 +30,15 @@ export const Header = ({ startLogout }) => (
       >
         <NavItem>Add candidate</NavItem>
       </LinkContainer>
+      <LinkContainer
+        to="/about"
+        activeClassName="is-active"
+        className="header__navlink"
+      >
+        <NavItem>About</NavItem>
+      </LinkContainer>
     </Nav>
+
     <Nav pullRight>
       <NavItem onClick={startLogout}>
         Logout <Glyphicon glyph="log-out" />
