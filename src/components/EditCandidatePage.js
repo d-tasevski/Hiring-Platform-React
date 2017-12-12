@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Button } from 'react-bootstrap';
 import CandidateForm from './CandidateForm';
 import { startEditCandidate, startRemoveCandidate } from '../actions/persons';
 
@@ -20,8 +21,21 @@ export class EditCandidatePage extends React.Component {
   render() {
     return (
       <div className="container">
+        <h2 className="textCenter">
+          Editing {this.props.person.firstName} {this.props.person.lastName}&apos;s
+          profile
+        </h2>
         <CandidateForm person={this.props.person} onSubmit={this.onSubmit} />
-        <button onClick={this.onRemove}>Remove Person</button>
+        <div className="removeBtn">
+          <Button
+            className="buttonDanger"
+            bsStyle="danger"
+            bsSize="small"
+            onClick={this.onRemove}
+          >
+            Remove Candidate
+          </Button>
+        </div>
       </div>
     );
   }

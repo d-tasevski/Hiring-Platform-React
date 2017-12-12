@@ -1,5 +1,17 @@
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  overflow: scroll;
+  overflow-x: hidden; }
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */ }
+
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000; }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -19,6 +31,100 @@ button {
 
 button:disabled {
   cursor: default; }
+
+.button,
+.button:link,
+.button:visited {
+  padding: 13px 0;
+  border: 1px solid #333;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 3px;
+  transition: all 0.2s ease-in-out; }
+  .button:hover,
+  .button:link:hover,
+  .button:visited:hover {
+    background: #333;
+    border: 1px solid #333;
+    color: #fefefe;
+    border-radius: 30px; }
+
+.buttonDanger,
+.buttonDanger:link,
+.buttonDanger:visited {
+  border: 1px solid #333;
+  color: #ffd54f;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 3px;
+  transition: all 0.2s ease-in-out; }
+  .buttonDanger:hover,
+  .buttonDanger:link:hover,
+  .buttonDanger:visited:hover {
+    background: #f44336;
+    border: 1px solid #333;
+    color: #fefefe;
+    border-radius: 30px; }
+
+.buttonInfo,
+.buttonInfo:link,
+.buttonInfo:focus,
+.buttonInfo:visited {
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 3px;
+  transition: all 0.3s ease-in-out;
+  outline: none !important;
+  margin-bottom: 3px; }
+  .buttonInfo:hover,
+  .buttonInfo:link:hover,
+  .buttonInfo:focus:hover,
+  .buttonInfo:visited:hover {
+    background: #333;
+    color: #fefefe;
+    border: 1px solid #333;
+    border-radius: 30px; }
+
+.custom-btn {
+  padding: 2px 5px;
+  background: transparent;
+  outline: none !important;
+  cursor: default;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px; }
+
+.buttonLabel {
+  border: 2px solid #000;
+  margin: 3px 2px;
+  z-index: 1; }
+
+.buttonLabel:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #000;
+  transition: all 0.3s ease; }
+
+.buttonLabel:hover {
+  color: #fff; }
+
+.buttonLabel:hover:after {
+  top: 0;
+  height: 100%; }
+
+.buttonLabel:active {
+  top: 2px; }
 
 .box-layout {
   background: #546e7a url("/images/bg.jpg") no-repeat;
@@ -50,7 +156,8 @@ button:disabled {
     background: rgba(0, 0, 0, 0.5); }
   .header a {
     margin-top: 2.5rem;
-    color: #fffeff !important; }
+    color: #fffeff !important;
+    transition: all 0.3s ease-in-out; }
     .header a:hover {
       color: #b5df00 !important; }
   .header__navlink {
@@ -61,7 +168,8 @@ button:disabled {
     color: #fffeff;
     cursor: default;
     padding-bottom: 2rem;
-    height: 100%; }
+    height: 100%;
+    transition: all 0.3s ease-in-out; }
     .header .navbar-brand:hover {
       color: #b5df00; }
     .header .navbar-brand p {
@@ -75,10 +183,15 @@ button:disabled {
 .filterForm {
   display: flex;
   justify-content: center; }
+  .filterForm .DateRangePicker {
+    margin-left: 5px; }
+  .filterForm input[type="text"] {
+    margin-left: 5px; }
   .filterForm .textFilter {
-    height: 45px; }
+    height: 47px;
+    width: 27rem; }
   .filterForm .sortFilter {
-    height: 45px; }
+    height: 46px; }
 
 .candidateList {
   display: flex;
@@ -90,14 +203,17 @@ button:disabled {
   text-align: center;
   height: 30rem;
   width: 49%;
-  padding: 2rem;
+  padding: 2rem 3rem;
   border: 1px solid black;
+  border-radius: 0.5rem;
   margin: 0.5rem;
   overflow: auto; }
   .candidateCard span {
     margin: 2px; }
   .candidateCard .panel .panel-default {
     text-align: justify; }
+  .candidateCard hr {
+    margin-bottom: 5px; }
   .candidateCard__appliedDate {
     font-size: 1.2rem; }
   .candidateCard__skilled {
@@ -109,3 +225,29 @@ button:disabled {
   .candidateCard__notes {
     font-size: 1.5rem;
     text-align: justify; }
+    .candidateCard__notes .well {
+      margin-bottom: 0; }
+
+.formCvDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.formContainer {
+  width: 70%;
+  margin: 0 auto; }
+  .formContainer .btn-block {
+    width: 60%;
+    margin: 0 auto; }
+
+.textCenter {
+  text-align: center; }
+
+.removeBtn {
+  text-align: right;
+  margin: 1rem;
+  margin-right: 15%; }
+
+input:hover,
+textarea:hover {
+  background: whitesmoke; }

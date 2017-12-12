@@ -44,6 +44,15 @@ export class CandidateListFilters extends Component {
       <div className="filterForm">
         <Form inline>
           <FormGroup controlId="formInlineName">
+            <label>Sort by:&nbsp;</label>
+            <select
+              className="form-control sortFilter"
+              value={this.props.filters.sortBy}
+              onChange={this.onSortChange}
+            >
+              <option value="date">Date</option>
+              <option value="amount">Name</option>
+            </select>
             <FormControl
               className="textFilter"
               type="text"
@@ -52,14 +61,6 @@ export class CandidateListFilters extends Component {
               onChange={this.onTextChange}
               placeholder="Search by Name"
             />
-            <select
-              className="form-control sortFilter"
-              value={this.props.filters.sortBy}
-              onChange={this.onSortChange}
-            >
-              <option value="date">Date</option>
-              <option value="amount">Amount</option>
-            </select>
             <DateRangePicker
               withPortal
               showDefaultInputIcon

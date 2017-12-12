@@ -2,11 +2,20 @@
   display: flex;
   justify-content: center;
 
+  & .DateRangePicker {
+    margin-left: 5px;
+  }
+
+  & input[type="text"] {
+    margin-left: 5px;
+  }
+
   & .textFilter {
-    height: 45px;
+    height: 47px;
+    width: 27rem;
   }
 
   & .sortFilter {
-    height: 45px;
+    height: 46px;
   }
 }

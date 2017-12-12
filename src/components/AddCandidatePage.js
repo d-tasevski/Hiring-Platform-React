@@ -12,7 +12,7 @@ export class AddCandidatePage extends React.Component {
   render() {
     return (
       <div className="container">
-        <h2>Add candidate info</h2>
+        <h2 className="textCenter">Add candidate info</h2>
         <CandidateForm onSubmit={this.onSubmit} path={this.props.match.path} />
       </div>
     );

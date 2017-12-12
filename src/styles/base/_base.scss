@@ -1,6 +1,16 @@
 html {
   // Reset default font size of 16 px to 10 px so that we can scale it with rem units
   font-size: 62.5%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space */
+  background: transparent; /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
 }
 
 body {

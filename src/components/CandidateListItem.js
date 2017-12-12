@@ -32,16 +32,23 @@ class CandidateListItem extends React.Component {
         <p className="candidateCard__appliedDate">
           Applied {formatDate(date)}{' '}
         </p>
-        <p className="candidateCard__skilled">Skilled in: </p>
-        <p>
-          {skills.split(',').map(skill => (
-            <Label bsStyle="default" key={skill}>
-              {skill}
-            </Label>
-          ))}
-        </p>
+        {skills && (
+          <div>
+            <p className="candidateCard__skilled">Skilled in: </p>
+            <p>
+              {skills.split(',').map(skill => (
+                <button className="custom-btn buttonLabel" key={skill}>
+                  {skill}
+                </button>
+              ))}
+            </p>
+          </div>
+        )}
         <div>
-          <Button onClick={() => this.setState({ open: !this.state.open })}>
+          <Button
+            className="buttonInfo"
+            onClick={() => this.setState({ open: !this.state.open })}
+          >
             More info
           </Button>
           <Panel collapsible expanded={this.state.open}>

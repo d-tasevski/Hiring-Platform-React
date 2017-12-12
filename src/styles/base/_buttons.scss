@@ -1,0 +1,99 @@
+.button,
+.button:link,
+.button:visited {
+  padding: 13px 0;
+  border: 1px solid #333;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 3px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: #333;
+    border: 1px solid #333;
+    color: #fefefe;
+    border-radius: 30px;
+  }
+}
+
+.buttonDanger,
+.buttonDanger:link,
+.buttonDanger:visited {
+  // padding: 13px 0;
+  border: 1px solid #333;
+  color: #ffd54f;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 3px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: #f44336;
+    border: 1px solid #333;
+    color: #fefefe;
+    border-radius: 30px;
+  }
+}
+
+.buttonInfo,
+.buttonInfo:link,
+.buttonInfo:focus,
+.buttonInfo:visited {
+  // padding: 13px 0;
+  // border: 1px solid #333;
+  color: #333;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 9px;
+  letter-spacing: 3px;
+  transition: all 0.3s ease-in-out;
+  outline: none !important;
+  margin-bottom: 3px;
+
+  &:hover {
+    background: #333;
+    color: #fefefe;
+    border: 1px solid #333;
+    border-radius: 30px;
+  }
+}
+
+.custom-btn {
+  padding: 2px 5px;
+  background: transparent;
+  outline: none !important;
+  cursor: default;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  border-radius: 5px;
+}
+.buttonLabel {
+  border: 2px solid #000;
+  margin: 3px 2px;
+  z-index: 1;
+}
+.buttonLabel:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.buttonLabel:hover {
+  color: #fff;
+}
+.buttonLabel:hover:after {
+  top: 0;
+  height: 100%;
+}
+.buttonLabel:active {
+  top: 2px;
+}

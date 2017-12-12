@@ -118,7 +118,7 @@ export default class CandidateForm extends Component {
       this.state.firstName.length > 1 && this.state.lastName.length > 1
     );
     return (
-      <div>
+      <div className="formContainer">
         {this.state.error && <p>{this.state.error}</p>}
         <Form onSubmit={this.onSubmit}>
           <FormGroup controlId="formControlsFirstName">
@@ -167,8 +167,9 @@ export default class CandidateForm extends Component {
               placeholder="Notes"
             />
           </FormGroup>
-          <div>
+          <div className="formCvDate">
             <FormGroup>
+              <ControlLabel>Applicant&quot;s CV</ControlLabel>
               <FormControl
                 disabled={cvInputCheck}
                 type="file"
@@ -176,19 +177,23 @@ export default class CandidateForm extends Component {
                 id="cvFile"
                 onChange={this.onCVUriChange}
                 accept=".pdf, .doc, .docx"
+                data-multiple-caption="{count} files selected"
               />
             </FormGroup>
-            <SingleDatePicker
-              withPortal
-              date={this.state.date} // momentPropTypes.momentObj or null
-              onDateChange={this.onDateChange} // PropTypes.func.isRequired
-              focused={this.state.dateFocused} // PropTypes.bool
-              onFocusChange={this.onFocusChange} // PropTypes.func.isRequired
-              numberOfMonths={1}
-              isOutsideRange={() => false}
-            />
+            <FormGroup>
+              <ControlLabel>Date of application: &nbsp;</ControlLabel>
+              <SingleDatePicker
+                withPortal
+                date={this.state.date} // momentPropTypes.momentObj or null
+                onDateChange={this.onDateChange} // PropTypes.func.isRequired
+                focused={this.state.dateFocused} // PropTypes.bool
+                onFocusChange={this.onFocusChange} // PropTypes.func.isRequired
+                numberOfMonths={1}
+                isOutsideRange={() => false}
+              />
+            </FormGroup>
           </div>
-          <Button type="submit" block>
+          <Button type="submit" block className="button">
             {this.props.path === '/create' ? 'Add Candidate' : 'Finish Editing'}
           </Button>
         </Form>

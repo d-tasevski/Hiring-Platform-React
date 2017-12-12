@@ -1,0 +1,30 @@
+.formCvDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.formContainer {
+  width: 70%;
+  margin: 0 auto;
+
+  & .btn-block {
+    width: 60%;
+    margin: 0 auto;
+  }
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.removeBtn {
+  text-align: right;
+  margin: 1rem;
+  margin-right: 15%;
+}
+
+input:hover,
+textarea:hover {
+  background: lighten($color: #bdbdbd, $amount: 22);
+}
