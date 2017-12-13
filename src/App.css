@@ -1,6 +1,6 @@
 html {
   font-size: 62.5%;
-  overflow: scroll;
+  overflow: auto;
   overflow-x: hidden; }
 
 body {
@@ -34,7 +34,8 @@ button:disabled {
   text-transform: uppercase;
   font-size: 13px;
   letter-spacing: 3px;
-  transition: all 0.2s ease-in-out; }
+  transition: all 0.2s ease-in-out;
+  outline: none; }
   .button:hover,
   .button:link:hover,
   .button:visited:hover {
@@ -42,6 +43,15 @@ button:disabled {
     border: 1px solid #333;
     color: #fefefe;
     border-radius: 30px; }
+  .button:focus,
+  .button:link:focus,
+  .button:visited:focus {
+    outline: none; }
+
+.box-layout__box .button {
+  padding: 13px 10px; }
+  .box-layout__box .button:hover {
+    background: #01887b; }
 
 .buttonDanger,
 .buttonDanger:link,
@@ -167,9 +177,16 @@ button:disabled {
     background: rgba(255, 255, 255, 0.85);
     border-radius: 3px;
     text-align: center;
-    width: 35rem;
-    padding: 3.2rem 1.6rem; }
+    width: 45rem;
+    padding: 5rem; }
   .box-layout__title {
+    margin: 0 0 1.6rem 0;
+    line-height: 1;
+    border-bottom: 0.5px solid #212121;
+    padding: 5px;
+    font-size: 3.7rem;
+    color: #505758; }
+  .box-layout__subtitle {
     margin: 0 0 1.6rem 0;
     line-height: 1; }
 
@@ -247,7 +264,8 @@ button:disabled {
   border: 1px solid black;
   border-radius: 0.5rem;
   margin: 0.5rem;
-  overflow: auto; }
+  overflow: auto;
+  transition: background 0.3s ease; }
   .candidateCard span {
     margin: 2px; }
   .candidateCard .panel .panel-default {
@@ -269,6 +287,8 @@ button:disabled {
       margin-bottom: 0; }
   .candidateCard .tooltipFix {
     right: 5rem; }
+  .candidateCard:hover {
+    background: rgba(158, 158, 158, 0.4); }
 
 .formCvDate {
   display: flex;

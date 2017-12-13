@@ -7,6 +7,8 @@
   border-radius: 0.5rem;
   margin: 0.5rem;
   overflow: auto;
+  transition: background 0.3s ease;
+
   & span {
     margin: 2px;
   }
@@ -40,5 +42,9 @@
 
   & .tooltipFix {
     right: 5rem;
+  }
+
+  &:hover {
+    background: fade-out($light-grey, 0.6);
   }
 }

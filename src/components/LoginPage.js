@@ -7,10 +7,10 @@ import { startLogin } from '../actions/auth';
 export const LoginPage = ({ startLogin }) => (
   <div className="box-layout">
     <div className="box-layout__box">
-      <h2 className="box-layout__title">InterVenture dashboard</h2>
-      <p>Get your candidates under control!</p>
-      <Button bsStyle="primary" bsSize="large" onClick={startLogin}>
-        Login
+      <h2 className="box-layout__title">InterVenture</h2>
+      <p className="box-layout__subtitle">Applicant tracking dashboard</p>
+      <Button className="button" bsSize="large" onClick={startLogin}>
+        Login with Google
       </Button>
     </div>
   </div>
