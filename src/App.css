@@ -3,21 +3,13 @@ html {
   overflow: scroll;
   overflow-x: hidden; }
 
-::-webkit-scrollbar {
-  width: 0px;
-  /* remove scrollbar space */
-  background: transparent;
-  /* optional: just make scrollbar invisible */ }
-
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #ff0000; }
-
 body {
   font-family: "Roboto", sans-serif;
   color: #212121;
   font-size: 1.6rem;
-  line-height: 1.6;
+  line-height: 1.6; }
+
+.app {
   background: #546e7a url("/images/ricepaper2.png"); }
 
 a {
@@ -237,7 +229,15 @@ button:disabled {
   display: flex;
   padding: 1rem;
   flex-flow: row wrap;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  /* optional: show position indicator in red */ }
+  .candidateList ::-webkit-scrollbar {
+    width: 0px;
+    /* remove scrollbar space */
+    background: transparent;
+    /* optional: just make scrollbar invisible */ }
+  .candidateList ::-webkit-scrollbar-thumb {
+    background: #ff0000; }
 
 .candidateCard {
   text-align: center;
@@ -293,3 +293,13 @@ button:disabled {
 input:hover,
 textarea:hover {
   background: whitesmoke; }
+
+.loader {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center; }
+  .loader__image {
+    height: 7rem;
+    width: 7rem; }

@@ -5,4 +5,13 @@
   // align-items: center;
   // justify-content: flex-start;
   font-family: "Open Sans", sans-serif;
+
+  ::-webkit-scrollbar {
+    width: 0px; /* remove scrollbar space */
+    background: transparent; /* optional: just make scrollbar invisible */
+  }
+  /* optional: show position indicator in red */
+  ::-webkit-scrollbar-thumb {
+    background: #ff0000;
+  }
 }

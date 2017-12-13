@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import candidatesReducer from '../reducers/persons';
 import filterReducer from '../reducers/filters';
 import authReducer from '../reducers/auth';
+import paginationReducer from '../reducers/pagination';
 
 /* eslint-disable no-underscore-dangle */
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -13,6 +14,7 @@ export default () => {
       persons: candidatesReducer,
       filters: filterReducer,
       auth: authReducer,
+      pagination: paginationReducer,
     }),
     composeEnhancers(applyMiddleware(thunk)),
     /* preloadedState, */

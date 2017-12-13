@@ -15,7 +15,7 @@ const store = configureStore();
 store.subscribe(() => {
   const state = store.getState();
   const visibleCandidates = getVisibleCandidates(state.persons, state.filters);
-  console.log(visibleCandidates, store.getState());
+  // console.log(visibleCandidates, store.getState());
 });
 
 let hasRendered = false;

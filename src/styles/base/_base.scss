@@ -4,14 +4,6 @@ html {
   overflow: scroll;
   overflow-x: hidden;
 }
-::-webkit-scrollbar {
-  width: 0px; /* remove scrollbar space */
-  background: transparent; /* optional: just make scrollbar invisible */
-}
-/* optional: show position indicator in red */
-::-webkit-scrollbar-thumb {
-  background: #ff0000;
-}
 
 body {
   // font-family: 'Open Sans', sans-serif;
@@ -19,9 +11,11 @@ body {
   color: $dark-grey;
   font-size: $medium-size;
   line-height: 1.6;
-  background: #546e7a url("/images/ricepaper2.png");
 }
 
+.app {
+  background: #546e7a url("/images/ricepaper2.png");
+}
 a {
   color: #616161;
   &:hover {

@@ -1,8 +1,8 @@
 import React from 'react';
 
 const LoadingScreen = () => (
-  <div>
-    <img src="/images/loader.gif" alt="App loading, please wait." />
+  <div className="loader">
+    <img className="loader__image" src="/images/loader.gif" alt="App loading" />
   </div>
 );
 
