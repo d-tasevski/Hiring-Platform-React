@@ -8,6 +8,7 @@ import getVisibleCandidates from './selectors/persons';
 import { login, logout } from './actions/auth';
 import { startSetCandidates } from './actions/persons';
 import { firebase } from './firebase/firebase';
+import LoadingScreen from './components/LoadingScreen';
 
 const store = configureStore();
 
@@ -31,7 +32,7 @@ const Root = () => (
   </Provider>
 );
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('root'));
+ReactDOM.render(<LoadingScreen />, document.getElementById('root'));
 
 firebase.auth().onAuthStateChanged((user) => {
   if (user) {
