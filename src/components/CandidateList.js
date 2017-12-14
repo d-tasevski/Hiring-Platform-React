@@ -7,6 +7,12 @@ import getVisibleCandidates from '../selectors/persons';
 
 export class CandidateList extends React.Component {
   render() {
+    const perPage = 6;
+    const pages = Math.ceil(this.props.persons.length / perPage);
+    const currentPage = this.props.page;
+    const startOffset = (currentPage - 1) * perPage;
+    const startCount = 0;
+
     const pagerInstance = (
       <Pager>
         <Pager.Item previous href="#">
@@ -18,14 +24,16 @@ export class CandidateList extends React.Component {
       </Pager>
     );
     return (
-      <div className="candidateList">
-        {this.props.persons.length === 0 ? (
-          <p>You have no candidates</p>
-        ) : (
-          this.props.persons.map(person => (
-            <CandidateListItem key={person.id} {...person} />
-          ))
-        )}
+      <div>
+        <div className="candidateList">
+          {this.props.persons.length === 0 ? (
+            <p>You have no candidates</p>
+          ) : (
+            this.props.persons.map(person => (
+              <CandidateListItem key={person.id} {...person} />
+            ))
+          )}
+        </div>
         {pagerInstance}
       </div>
     );

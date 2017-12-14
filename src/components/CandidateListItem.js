@@ -49,7 +49,8 @@ class CandidateListItem extends React.Component {
             className="buttonInfo"
             onClick={() => this.setState({ open: !this.state.open })}
           >
-            More info
+            {' '}
+            {this.state.open ? 'Hide info' : 'More info'}
           </Button>
           <Panel collapsible expanded={this.state.open}>
             {notes && (
