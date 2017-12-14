@@ -27,7 +27,7 @@ const getVisibleCandidates = (persons, {
       if (sortBy === 'date') {
         return a.date < b.date ? 1 : -1;
       } else if (sortBy === 'name') {
-        return a.firstName < b.firstName ? -1 : 1;
+        return a.lastName < b.lastName ? -1 : 1;
       }
     });
 

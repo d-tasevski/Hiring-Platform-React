@@ -7,7 +7,7 @@ import getVisibleCandidates from '../selectors/persons';
 
 export class CandidateList extends React.Component {
   render() {
-    // const perPage = 6;
+    const perPage = 6;
     // const pages = Math.ceil(this.props.persons.length / perPage);
     // const currentPage = this.props.page;
     // const startOffset = (currentPage - 1) * perPage;
@@ -34,7 +34,7 @@ export class CandidateList extends React.Component {
             ))
           )}
         </div>
-        {pagerInstance}
+        {this.props.persons.length > perPage && pagerInstance}
       </div>
     );
   }
