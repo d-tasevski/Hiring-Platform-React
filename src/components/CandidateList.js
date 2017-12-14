@@ -27,7 +27,9 @@ export class CandidateList extends React.Component {
       <div>
         <div className="candidateList">
           {this.props.persons.length === 0 ? (
-            <p>You have no candidates</p>
+            <div className="list__message">
+              <p>You have no candidates</p>
+            </div>
           ) : (
             this.props.persons.map(person => (
               <CandidateListItem key={person.id} {...person} />
