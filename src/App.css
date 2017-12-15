@@ -234,15 +234,14 @@ button:disabled {
   display: flex;
   justify-content: center; }
   .filterForm .DateRangePicker_1 {
-    margin: 0 5px 0 5px;
+    margin: 0 5px;
     border-radius: 5px; }
-  .filterForm input[type="text"] {
-    margin-left: 5px; }
   .filterForm .textFilter {
-    height: 47px;
+    height: 48px;
+    margin-left: 5px;
     width: 27rem; }
   .filterForm .sortFilter {
-    height: 46px; }
+    height: 48px; }
 
 .candidateList {
   display: flex;

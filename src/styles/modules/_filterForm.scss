@@ -3,20 +3,18 @@
   justify-content: center;
 
   & .DateRangePicker_1 {
-    margin: 0 5px 0 5px;
+    margin: 0 5px;
     border-radius: 5px;
   }
 
-  & input[type="text"] {
-    margin-left: 5px;
-  }
-
   & .textFilter {
-    height: 47px;
+    height: 48px;
+    margin-left: 5px;
+
     width: 27rem;
   }
 
   & .sortFilter {
-    height: 46px;
+    height: 48px;
   }
 }
