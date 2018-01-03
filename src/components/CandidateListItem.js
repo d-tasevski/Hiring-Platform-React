@@ -8,7 +8,7 @@ class CandidateListItem extends React.Component {
     super();
 
     this.state = {
-      open: false,
+      open: false
     };
   }
   render() {
@@ -20,7 +20,7 @@ class CandidateListItem extends React.Component {
       date,
       cvUri,
       cvFileName,
-      id,
+      id
     } = this.props;
     return (
       <div className="container candidateCard">

@@ -5,6 +5,7 @@ const getVisibleCandidates = (persons, {
 }) =>
   persons
     .filter((person) => {
+      console.log(person);
       const createdAtMoment = moment(person.date);
       const startDateMatch = startDate
         ? startDate.isSameOrBefore(createdAtMoment, 'day')

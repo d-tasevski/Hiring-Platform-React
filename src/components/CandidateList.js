@@ -25,6 +25,7 @@ export class CandidateList extends React.Component {
     );
     return (
       <div>
+        {console.log(this.props)}
         <div className="candidateList">
           {this.props.persons.length === 0 ? (
             <div className="list__message">
